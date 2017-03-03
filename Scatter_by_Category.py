@@ -8,3 +8,7 @@ from bokeh.layouts import widgetbox, row, column
 from bokeh.models.widgets import Select
 from bokeh.plotting import figure, ColumnDataSource
 from bokeh.models import HoverTool
+
+
+if name == __main__:
+  print 'hello'
