@@ -18,9 +18,9 @@ Required column headers are:
 
 >StartDate
 
-**metric_list**: list of string column titles of metrics that will be plotted. List entries **must** match column titles. 
+**metric_list**: list of string column titles of metrics that will be plotted. List entries **must** match column titles in the excel document. No spaces! 
 
-Using only the required parameters
+Using only the required parameters, we are able to create a simple scatter chart over time with a tooltip of the serial number and metric value.
 
 
 ###Optional Parameters
