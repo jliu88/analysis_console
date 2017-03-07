@@ -1,6 +1,6 @@
 #Scatter_By_Category
 
-TODO: Write a project description
+This module uses Bokeh to create a simple interactive scatter chart with tooltips, with the additional flexibility of differentiating categories by colors. 
 
 ##Installation
 
@@ -9,6 +9,18 @@ Requires Bokeh and panda
 
 ##Usage
 Create a script that gives Scatter_by_Category the required parameters. 
+
+###Required parameters
+ds_loc: string location of excel document where data is stored
+metric_list: list of string column titles of metrics that will be plotted. List entries must match column titles
+
+###Optional Parameters
+cat_list: list of string column titles of categories to separate data. List entries must match column titles
+col_list: list of colors to separate the categories by. Assigned default colors if none is given
+renamer: dict of column titles to rename. e.g. {'Serial Number' : 'SerialNumber', 'Start Date': 'StartDate'}
+xml_loc: string location of xml file 
+platform: string title of the platform in the xml file
+
 
 Run a bokeh server and point it at the script directory. 
 
