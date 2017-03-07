@@ -25,10 +25,14 @@ Using only the required parameters, we are able to create a simple scatter chart
 
 ###Optional Parameters
 **cat_list**: list of string column titles of categories to separate data. List entries must match column titles
+
 **col_list**: list of colors to separate the categories by. Assigned default colors if none is given
+
 **renamer**: dict of column titles to rename. e.g. 
 >{'Serial Number' : 'SerialNumber', 'Start Date': 'StartDate'}
+
 **xml_loc**: string location of xml file 
+
 **platform**: string title of the platform in the xml file
 
 
