@@ -8,16 +8,17 @@ Requires Bokeh and panda
 
 
 ##Usage
+Create a script that gives Scatter_by_Category the required parameters. 
 
-Run a bokeh server and point it at your script directory. For example, from this directory, you can run:
+Run a bokeh server and point it at the script directory. 
 
-bokeh serve .
-Or from one directory level up, you can run:
+For example, create a script name plotter.py that uses Scatter_by_Category.gen_charts().
+Then run:
+bokeh serve plotter.py
 
-bokeh serve stocks
 Now navigate to the following URL in a browser:
+http://localhost:5006/plotter.py
 
-http://localhost:5006/stocks
 
 ##Contributing
 
