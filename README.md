@@ -26,7 +26,7 @@ Run a bokeh server and point it at the script directory.
 
 For example, create a script name plotter.py that uses Scatter_by_Category.gen_charts().
 Then run:
-bokeh serve plotter.py
+>bokeh serve plotter.py
 
 Now navigate to the following URL in a browser:
 >http://localhost:5006/plotter.py
