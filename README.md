@@ -2,7 +2,7 @@
 
 TODO: Write a project description
 
-#Installation
+##Installation
 
 Requires Bokeh and panda
 
