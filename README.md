@@ -1,10 +1,12 @@
-#Scatter_By_Category
+#Scatter_by_Category
 
 This module uses Bokeh to create a simple interactive scatter chart with tooltips, with the additional flexibility of differentiating categories by colors. 
 
 ##Installation
 
 Requires Bokeh and panda
+
+Copy Scatter_by_Category.py to a local directory and import with another program
 
 
 ##Usage
