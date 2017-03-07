@@ -11,7 +11,7 @@ Requires Bokeh and panda
 Create a program that gives Scatter_by_Category the required parameters. 
 
 ###Required parameters
-**ds_loc**: string location of the excel document with all the data. Column headers must be on the first row and is recommended to not include spaces. If there are spaces then they can be changed with the **renamer** parameter.
+**ds_loc**: dataframe or string location of the excel document with all the data. Column headers must be on the first row and is recommended to not include spaces. If there are spaces then they can be changed with the **renamer** parameter.
 
 Required column headers are: 
 >SerialNumber
@@ -20,18 +20,18 @@ Required column headers are:
 
 **metric_list**: list of string column titles of metrics that will be plotted. List entries **must** match column titles in the excel document. No spaces! 
 
-Using only the required parameters, we are able to create a simple scatter chart over time with a tooltip of the serial number and metric value.
+Using only the required parameters, we are able to create a simple scatter chart over time with a tooltip of the serial number and metric value. 
 
 
 ###Optional Parameters
-**cat_list**: list of string column titles of categories to separate data. List entries must match column titles
+**cat_list**: list of string column titles of categories to separate data. List entries must match column titles. No spaces!
 
 **col_list**: list of colors to separate the categories by. Assigned default colors if none is given
 
-**renamer**: dict of column titles to rename. e.g. 
->{'Serial Number' : 'SerialNumber', 'Start Date': 'StartDate'}
+**renamer**: dict of column titles to rename in order to remove spaces or find columsn to assign serial number and start date to. e.g. 
+>{'Serial Number' : 'SerialNumber', 'Date': 'StartDate'}
 
-**xml_loc**: string location of xml file 
+**xml_loc**: string location of xml file. xml structure must follow a specific template
 
 **platform**: string title of the platform in the xml file
 
