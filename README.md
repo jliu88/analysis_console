@@ -1,13 +1,13 @@
-##Scatter_By_Category
+#Scatter_By_Category
 
 TODO: Write a project description
 
-Installation
+#Installation
 
 Requires Bokeh and panda
 
 
-Usage
+#Usage
 
 Run a bokeh server and point it at your script directory. For example, from this directory, you can run:
 
@@ -19,21 +19,21 @@ Now navigate to the following URL in a browser:
 
 http://localhost:5006/stocks
 
-Contributing
+#Contributing
 
-Fork it!
+#Fork it!
 Create your feature branch: git checkout -b my-new-feature
 Commit your changes: git commit -am 'Add some feature'
 Push to the branch: git push origin my-new-feature
 Submit a pull request :D
-History
+#History
 
 TODO: Write history
 
-Credits
+#Credits
 
 TODO: Write credits
 
-License
+#License
 
 TODO: Write license
