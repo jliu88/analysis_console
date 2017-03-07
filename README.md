@@ -47,6 +47,10 @@ Then run:
 Now navigate to the following URL in a browser:
 >http://localhost:5006/plotter.py
 
+###In Progress
+1. Allow selection of x axis to plot by
+2. Add pictures in README
+3. Add additional information regarding xml structure and usage
 
 ##Contributing
 
