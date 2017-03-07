@@ -35,7 +35,7 @@ Using only the required parameters, we are able to create a simple scatter chart
 
 **platform**: string title of the platform in the xml file
 
-
+###Running
 Run a bokeh server and point it at the script directory. 
 
 For example, create a script name plotter.py that uses Scatter_by_Category.gen_charts().
