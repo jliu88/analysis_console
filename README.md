@@ -29,7 +29,7 @@ Then run:
 bokeh serve plotter.py
 
 Now navigate to the following URL in a browser:
-http://localhost:5006/plotter.py
+>http://localhost:5006/plotter.py
 
 
 ##Contributing
