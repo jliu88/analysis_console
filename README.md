@@ -4,11 +4,20 @@ TODO: Write a project description
 
 Installation
 
-TODO: Describe the installation process
+Requires Bokeh and panda
+
 
 Usage
 
-TODO: Write usage instructions
+Run a bokeh server and point it at your script directory. For example, from this directory, you can run:
+
+bokeh serve .
+Or from one directory level up, you can run:
+
+bokeh serve stocks
+Now navigate to the following URL in a browser:
+
+http://localhost:5006/stocks
 
 Contributing
 
