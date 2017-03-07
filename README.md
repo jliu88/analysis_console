@@ -30,7 +30,7 @@ Using only the required parameters, we are able to create a simple scatter chart
 
 **col_list**: list of colors to separate the categories by. Assigned default colors if none is given
 
-**renamer**: dict of column titles to rename in order to remove spaces or find columsn to assign serial number and start date to. e.g. 
+**renamer**: dict of column titles to rename in order to remove spaces or find columns to assign serial number and start date to. e.g. 
 >{'Serial Number' : 'SerialNumber', 'Date': 'StartDate'}
 
 **xml_loc**: string location of xml file. xml structure must follow a specific template
@@ -63,6 +63,3 @@ TODO: Write history
 
 TODO: Write credits
 
-##License
-
-TODO: Write license
