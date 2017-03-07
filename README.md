@@ -11,8 +11,12 @@ Requires Bokeh and panda
 Create a script that gives Scatter_by_Category the required parameters. 
 
 ###Required parameters
-ds_loc: string location of excel document where data is stored
+ds_loc: string location of the excel document with all the data. Required column headers are currently: 
+>SerialNumber and >StartDate
 metric_list: list of string column titles of metrics that will be plotted. List entries must match column titles
+
+Using only the required parameters
+
 
 ###Optional Parameters
 cat_list: list of string column titles of categories to separate data. List entries must match column titles
