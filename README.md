@@ -37,8 +37,8 @@ Using only the required parameters, we are able to create a simple scatter chart
 
 **platform**: string title of the platform in the xml file
 
-## Running
-### Writting the script
+# Running
+## Writting the script
 Import the module and feed it arguments. For example:
 '''
 x = analaysis_console.tools(df, metric)
@@ -47,7 +47,7 @@ x.run()
 
 See example.py for additional examples
 
-### Displaying the chart
+## Displaying the chart
 Run a bokeh server and point it at the script directory. 
 
 For example, if your script is named example.py.
@@ -62,7 +62,7 @@ You can also enter into the console:
 
 and it will directly open the page
 
-## In Progress
+# In Progress
 1. Add pictures in README
 2. Add additional information regarding xml structure and usage
 
