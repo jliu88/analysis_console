@@ -57,7 +57,7 @@ Open the console and run:
 Now navigate to the following URL in a browser:
 >http://localhost:5006/example
 
-You can also enter:
+You can also enter into the console:
 >bokeh serve example.py --show
 
 and it will directly open the page
