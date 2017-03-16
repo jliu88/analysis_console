@@ -13,7 +13,7 @@ Create a script that imports analsyis_console and feed it parameters.
 
 See example.py for examples 
 
-## Required parameters
+## Required Arguments
 - **df**: dataframe or string location of the excel document with all the data. Column headers must be on the first row and is recommended to not include spaces. If there are spaces then they can be changed with the **renamer** parameter.
 
 Additional information can be stored in the tooltips if the column header is:
@@ -25,7 +25,7 @@ SerialNumber
 
 - **xaxis**: column title for the x axis
 
-## Optional Parameters
+## Optional Arguments
 - **cato**: list of string column titles of categories to separate data. List entries must match column titles. No spaces!
 
 - **col**: list of colors to separate the categories by. Default is Set1[9]
