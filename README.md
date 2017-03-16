@@ -1,4 +1,4 @@
-#Scatter_by_Category
+# Scatter_by_Category
 
 This module uses Bokeh to create a simple interactive scatter chart with tooltips, with the additional flexibility of differentiating categories by colors. 
 
