@@ -6,11 +6,18 @@ This module uses Bokeh to create a simple interactive scatter chart with tooltip
 
 Requires Bokeh and panda
 
-Copy analysis_console.py to a local directory and import with another program
+Copy analysis_console.py to a local directory and import with another program. Then call the run method and go to the console to run. See Running for how to run int he console.
+for example:
+x = analaysis_console.tools(df, metric)
+x.run()
 
+See example.py for additional examples
 
 ## Usage
-Create a program that gives Scatter_by_Category.gen_charts() the following parameters. 
+Create a script that imports analsyis_console and feed it parameters.
+
+
+See example.py for example 
 
 ### Required parameters
 **df**: dataframe or string location of the excel document with all the data. Column headers must be on the first row and is recommended to not include spaces. If there are spaces then they can be changed with the **renamer** parameter.
@@ -45,7 +52,7 @@ Then run:
 Now navigate to the following URL in a browser:
 >http://localhost:5006/plotter.py
 
-You can also run:
+You can also enter:
 >bokeh serve plotter.py --show
 and it will directly open the page
 
