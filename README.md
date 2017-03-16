@@ -68,8 +68,9 @@ bokeh serve example.py --show
 ```
 
 # In Progress
-1. Add pictures in README
-2. Add additional information regarding xml structure and usage
+1. Allow xaxis to be selectable 
+2. Add pictures in README
+3. Add additional information regarding xml structure and usage
 
 # Contributing
 
