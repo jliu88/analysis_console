@@ -2,18 +2,18 @@
 
 This module uses Bokeh to create a simple interactive scatter chart with tooltips, with the additional flexibility of differentiating categories by colors. 
 
-## Installation
+# Installation
 
 Requires Bokeh and panda
 
 Copy analysis_console.py to a local directory and import with another program.
 
-## Usage
+# Usage
 Create a script that imports analsyis_console and feed it parameters.
 
 See example.py for examples 
 
-### Required parameters
+## Required parameters
 **df**: dataframe or string location of the excel document with all the data. Column headers must be on the first row and is recommended to not include spaces. If there are spaces then they can be changed with the **renamer** parameter.
 
 Additional information can be stored in the tooltips if the column header is:
@@ -25,7 +25,7 @@ Using only the required parameters, we are able to create a simple scatter chart
 
 **xaxis**: column title for the x axis
 
-### Optional Parameters
+## Optional Parameters
 **cato**: list of string column titles of categories to separate data. List entries must match column titles. No spaces!
 
 **col**: list of colors to separate the categories by. Default is Set1[9]
@@ -37,8 +37,8 @@ Using only the required parameters, we are able to create a simple scatter chart
 
 **platform**: string title of the platform in the xml file
 
-### Running
-#### Writting the script
+## Running
+### Writting the script
 Import the module and feed it arguments. For example:
 '''
 x = analaysis_console.tools(df, metric)
@@ -47,7 +47,7 @@ x.run()
 
 See example.py for additional examples
 
-#### Displaying the chart
+### Displaying the chart
 Run a bokeh server and point it at the script directory. 
 
 For example, if your script is named example.py.
@@ -62,22 +62,22 @@ You can also enter into the console:
 
 and it will directly open the page
 
-### In Progress
+## In Progress
 1. Add pictures in README
 2. Add additional information regarding xml structure and usage
 
-## Contributing
+# Contributing
 
-## Fork it!
+# Fork it!
 Create your feature branch: git checkout -b my-new-feature
 Commit your changes: git commit -am 'Add some feature'
 Push to the branch: git push origin my-new-feature
 Submit a pull request :D
-## History
+# History
 
 TODO: Write history
 
-## Credits
+# Credits
 
 TODO: Write credits
 
