@@ -55,7 +55,7 @@ Open the console and run:
 >bokeh serve example.py
 
 Now navigate to the following URL in a browser:
->http://localhost:5006/plotter.py
+>http://localhost:5006/example
 
 You can also enter:
 >bokeh serve example.py --show
