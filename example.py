@@ -7,7 +7,7 @@ from bokeh.sampledata.us_marriages_divorces import data
 example = 3
 
 if example == 1: #Basic scatter chart
-    x = ac.tools(df=autompg,
+    x = ac.Tools(df=autompg,
                 metric=list(autompg.columns),
                 xaxis='weight'
                 )
@@ -16,7 +16,7 @@ if example == 1: #Basic scatter chart
 
 
 if example == 2: #Scatter chart with different colors for categories
-    x = ac.tools(df=autompg,
+    x = ac.Tools(df=autompg,
                 metric=list(autompg.columns),
                 xaxis = 'weight', 
                 cato = list(autompg.columns)
@@ -24,7 +24,7 @@ if example == 2: #Scatter chart with different colors for categories
     x.run()
     
 if example ==3: #Example of divorces over time
-    x = ac.tools(df=data,
+    x = ac.Tools(df=data,
                 metric=list(data.columns),
                 xaxis='Year'
                 )

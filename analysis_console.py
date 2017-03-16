@@ -7,7 +7,7 @@ from bokeh.models import HoverTool
 from bokeh.layouts import widgetbox, row, column
 from bokeh.palettes import Set1
 
-class tools(object):
+class Tools(object):
     
     def __init__(self, df, metric, xaxis, **kwargs):
         """
