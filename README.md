@@ -31,8 +31,9 @@ SerialNumber
 - **col**: list of colors to separate the categories by. Default is Set1[9]
 
 - **renamer**: dict of column titles to rename in order to remove spaces or find columns to assign serial number and start date to. e.g. 
->{'Serial Number' : 'SerialNumber', 'Date': 'StartDate'}
-
+```
+{'Serial Number' : 'SerialNumber', 'Date': 'StartDate'}
+```
 - **xml_loc**: string location of xml file. xml structure must follow a specific template
 
 - **platform**: string title of the platform in the xml file
