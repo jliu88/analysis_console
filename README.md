@@ -42,7 +42,7 @@ SerialNumber
 ## Writting the script
 Import the module and feed it arguments. For example:
 ```
-x = analaysis_console.tools(df, metric)
+x = analaysis_console.tools(df, metric, xaxis)
 x.run()
 ```
 
