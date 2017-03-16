@@ -30,7 +30,7 @@ SerialNumber
 
 - **col** (list): list of colors to separate the categories by. Default is Set1[9]
 
-- **renamer** (dict): dict of column titles to rename in order to remove spaces or find columns to assign serial number and start date to. e.g. 
+- **renamer** (dict): dict of column titles to rename in order to remove spaces or find columns to assign serial number to. e.g. 
 ```
 {'Serial Number' : 'SerialNumber', 'Date': 'StartDate'}
 ```
@@ -42,6 +42,7 @@ SerialNumber
 ## Writting the script
 Import the module and feed it arguments. For example:
 ```
+import analysis_console
 x = analaysis_console.tools(df, metric, xaxis)
 x.run()
 ```
