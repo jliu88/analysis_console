@@ -11,8 +11,7 @@ Copy analysis_console.py to a local directory and import with another program.
 ## Usage
 Create a script that imports analsyis_console and feed it parameters.
 
-
-See example.py for example 
+See example.py for examples 
 
 ### Required parameters
 **df**: dataframe or string location of the excel document with all the data. Column headers must be on the first row and is recommended to not include spaces. If there are spaces then they can be changed with the **renamer** parameter.
@@ -54,11 +53,13 @@ Run a bokeh server and point it at the script directory.
 For example, if your script is named example.py.
 Open the console and run:
 >bokeh serve example.py
+
 Now navigate to the following URL in a browser:
 >http://localhost:5006/plotter.py
 
 You can also enter:
 >bokeh serve example.py --show
+
 and it will directly open the page
 
 ### In Progress
