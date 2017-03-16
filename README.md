@@ -6,15 +6,7 @@ This module uses Bokeh to create a simple interactive scatter chart with tooltip
 
 Requires Bokeh and panda
 
-Copy analysis_console.py to a local directory and import with another program. Then call the run method and go to the console to run. 
-See Running for how to run in the console.
-for example:
-
-x = analaysis_console.tools(df, metric)
-
-x.run()
-
-See example.py for additional examples
+Copy analysis_console.py to a local directory and import with another program.
 
 ## Usage
 Create a script that imports analsyis_console and feed it parameters.
@@ -47,16 +39,26 @@ Using only the required parameters, we are able to create a simple scatter chart
 **platform**: string title of the platform in the xml file
 
 ### Running
+#### Writting the script
+Import the module and feed it arguments. For example:
+
+x = analaysis_console.tools(df, metric)
+
+x.run()
+
+See example.py for additional examples
+
+#### Displaying the chart
 Run a bokeh server and point it at the script directory. 
 
-For example, create a script name plotter.py.
-Then run:
->bokeh serve plotter.py
+For example, if your script is named example.py.
+Open the console and run:
+>bokeh serve example.py
 Now navigate to the following URL in a browser:
 >http://localhost:5006/plotter.py
 
 You can also enter:
->bokeh serve plotter.py --show
+>bokeh serve example.py --show
 and it will directly open the page
 
 ### In Progress
