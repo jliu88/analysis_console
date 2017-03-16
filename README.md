@@ -62,11 +62,10 @@ Now navigate to the following URL in a browser:
 http://localhost:5006/example
 ```
 
-You can also enter into the console:
+To directly open the page, you can also enter into the console:
 ```
 bokeh serve example.py --show
 ```
-and it will directly open the page
 
 # In Progress
 1. Add pictures in README
