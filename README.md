@@ -9,7 +9,7 @@ Requires Bokeh and panda
 Copy analysis_console.py to a local directory and import with another program.
 
 # Usage
-Create a script that imports analsyis_console and feed it parameters.
+Create a script that imports analysis_console and feed it parameters.
 
 See example.py for examples 
 
