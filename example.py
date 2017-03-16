@@ -29,5 +29,3 @@ if example ==3: #Example of divorces over time
                 xaxis='Year'
                 )
     x.run()
-
-#Adding something and seeing what happens
