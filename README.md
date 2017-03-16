@@ -40,10 +40,10 @@ Using only the required parameters, we are able to create a simple scatter chart
 # Running
 ## Writting the script
 Import the module and feed it arguments. For example:
-'''
+```
 x = analaysis_console.tools(df, metric)
 x.run()
-'''
+```
 
 See example.py for additional examples
 
