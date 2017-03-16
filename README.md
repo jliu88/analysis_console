@@ -21,22 +21,22 @@ Additional information can be stored in the tooltips if the column header is:
 SerialNumber
 ```
 
-- **metric** (list): list of string column titles of metrics that will be plotted. List entries **must** match column titles in the excel document. No spaces! 
+- **metric** (list): string column titles of metrics that will be plotted. List entries **must** match column titles in the excel document. No spaces! 
 
 - **xaxis** (str): column title for the x axis
 
 ## Optional Arguments
-- **cato** (list): list of string column titles of categories to separate data. List entries must match column titles. No spaces!
+- **cato** (list): string column titles of categories to separate data. List entries must match column titles. No spaces!
 
-- **col** (list): list of colors to separate the categories by. Default is Set1[9]
+- **col** (list): colors to separate the categories by. Default is Set1[9]
 
-- **renamer** (dict): dict of column titles to rename in order to remove spaces or find columns to assign serial number to. e.g. 
+- **renamer** (dict): column titles to rename in order to remove spaces or find columns to assign serial number to. e.g. 
 ```
 {'Serial Number' : 'SerialNumber', 'Date': 'StartDate'}
 ```
-- **xml_loc** (str): string location of xml file. xml structure must follow a specific template
+- **xml_loc** (str): location of xml file. xml structure must follow a specific template
 
-- **platform** (str): string title of the platform in the xml file
+- **platform** (str): title of the platform in the xml file
 
 # Running
 ## Writting the script
