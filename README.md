@@ -6,9 +6,12 @@ This module uses Bokeh to create a simple interactive scatter chart with tooltip
 
 Requires Bokeh and panda
 
-Copy analysis_console.py to a local directory and import with another program. Then call the run method and go to the console to run. See Running for how to run int he console.
+Copy analysis_console.py to a local directory and import with another program. Then call the run method and go to the console to run. 
+See Running for how to run in the console.
 for example:
+
 x = analaysis_console.tools(df, metric)
+
 x.run()
 
 See example.py for additional examples
