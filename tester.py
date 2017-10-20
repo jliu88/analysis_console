@@ -1,13 +1,19 @@
+import warnings
 from os import path
 
 import pandas as pd
 from hayspcconsole.analysis_console import Console
 
-DIRT = r'\\ushw-file\users\transfer\Hayward_Statistical_Process_Control\Control_Charts\MiSeq\OP750\MiSeqRUO'
-DS = 'MiSeq FIT Data.xlsx'
-METRIC = ['Q30', 'ReadsPF', 'ClusterDensity', 'RunTime']
-CATEGORY = ['ReagentLot', 'PhiXLot', 'Flowcell_Lot']
-XML_DIRT = r'\\ushw-file\users\transfer\Hayward_Statistical_Process_Control\Control_Charts\MiSeq\OP750\MiSeqRUO'
+warnings.filterwarnings("ignore")
+
+#DIRT = r'\\ushw-file\users\transfer\Hayward_Statistical_Process_Control\Control_Charts\MiSeq\OP750\MiSeqRUO'
+#DS = 'MiSeq FIT Data.xlsx'
+DIRT = r'\\ushw-file\users\transfer\Hayward_Statistical_Process_Control\Control_Charts\MiSeq\OP750\MiSeqDx'
+DS = r'MiSeqDx FIT Data.xlsx'
+METRIC = ['Q30', 'ReadsPF', 'ClusterDensity', 'RunTime', 'PrephasingR1', 'PhasingR1']
+CATEGORY = ['PhiXLot']
+#XML_DIRT = r'\\ushw-file\users\transfer\Hayward_Statistical_Process_Control\Control_Charts\MiSeq\OP750\MiSeqRUO'
+XML_DIRT = r'\\ushw-file\users\transfer\Hayward_Statistical_Process_Control\Control_Charts\MiSeq\OP750\MiSeqDx'
 XML = 'MiSeq_OP750_SPC.xml'
 
 ds_path = path.join(DIRT,DS)
@@ -25,7 +31,13 @@ CONV = {'Serial Number':'SerialNumber',
         'Q30 R1' : 'Q30R1',
         'Q30 R2' : 'Q30R2'}
 
-df = pd.read_excel(ds_path)
+df = pd.read_excel(ds_path, converters={'FLowcell_Lot' : str,
+                                        'PR2_Lot' : str,
+                                        'ReagentLot' : str,
+                                        'PhiXLot' : str})
+#==============================================================================
+# df['Flowcell_Lot'] = df['Flowcell_Lot'].astype(str)
+#==============================================================================
 
 #Without category
 #foo = Console(df, 
@@ -46,5 +58,5 @@ foo = Console(df,
               renamer=CONV,
               cato=CATEGORY,
               xml_loc=xml_path,
-              platform='MiSeqRUO')
+              platform='Data')
 foo.run()

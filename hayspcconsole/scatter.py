@@ -9,7 +9,7 @@ from bokeh.palettes import Set1
 
 def create_scatter(df_orig, met, xaxis, **kwargs):
     """
-    Creates scatter
+    Creates and returns a scatter plot as a bokeh figure object with circle glyphs
     """    
     if 'cato' in kwargs:
         cato = kwargs['cato']
@@ -23,7 +23,6 @@ def create_scatter(df_orig, met, xaxis, **kwargs):
         metric_attrib = kwargs['metric_attrib']
     else:
         metric_attrib = False
-
 
     df = df_orig
         
@@ -98,8 +97,12 @@ def scatter_template(df, met, xaxy, cato):
 
     hover = HoverTool(tooltips = tooltips)
     scatter_args['tools'].append(hover)
-                           
-    return figure(**scatter_args)
+    
+    p = figure(**scatter_args)
+    p.xaxis.axis_label = xaxy
+    p.yaxis.axis_label = met            
+           
+    return p
     
 def create_limits(p, df, xaxis, metric_attrib):
     """

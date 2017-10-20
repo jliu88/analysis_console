@@ -34,9 +34,10 @@ class Console(object):
             self.df = pd.read_excel(df)
         if isinstance(df, pd.DataFrame):
             self.df = df        
-        self.df.dropna(inplace=True)
+        #self.df.dropna(subset=metric, inplace=True)
         if 'cato' in kwargs:
             self.cato = kwargs['cato']
+            #self.df.dropna(subset=self.cato)
         if 'renamer' in kwargs:
             self.renamer = kwargs['renamer']
             self.df.rename(columns = self.renamer, inplace =True)
@@ -56,6 +57,8 @@ class Console(object):
         self.metric = metric
         self.xaxis = xaxis
         self.lastn = 300
+        
+        print('initialized')
         
     def param_get(self, metric_name, root, platform):
         """
@@ -135,8 +138,6 @@ class Console(object):
                                    self.metsel.value,
                                    self.xaxis, 
                                    **self.s_kwargs)    
-        
-
 
         self.layout.children[1] = ps
 
@@ -172,11 +173,14 @@ class Console(object):
                                  ps, pb, pt)
 
         else: 
+            print(self.metsel.value, self.xaxis)
             ps = scatter.create_scatter(self.df, 
                                        self.metsel.value,
                                        self.xaxis, 
                                        **self.s_kwargs)
             self.layout = column(row(self.mets_box, self.lasts_box), ps)
+            
+            
             
         self.metsel.on_change('value', self.update)
         self.lastsel.on_change('value', self.update)

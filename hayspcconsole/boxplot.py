@@ -9,6 +9,7 @@ from bokeh.models import HoverTool, ColumnDataSource
 def create_boxplot(df_orig, met, **kwargs):
     
     cato = kwargs['cato']
+    print('-----cato----:', cato)
 
     if 'col' in kwargs:
         col = kwargs['colors']
@@ -34,19 +35,20 @@ def quantiles(df, met, cato):
     
     def outlier(group):
         cat = group.name
-
         return group[met][(group[met] < lower[cat])
                     | (group[met] > upper[cat])]
 
     outly = groups.apply(outlier)
-    if not outly.empty:
+    if not outly.empty:    
         outx = []
         outy = []
-        
         for catos in q1.index.tolist():
             for val in outly[catos]:
-                outx.append(catos)
+                outx.append(str(catos))
                 outy.append(val)
+    else:
+        outx = False
+        outy = False
 
     qmin = groups[met].quantile(0.00)
     qmax = groups[met].quantile(1.00)
@@ -67,15 +69,8 @@ def boxplot(q1, q2, q3, upper, lower, outx, outy, color):
     upper_val = list(upper.values)
     lower_val = list(lower.values)
     
-#    q1_val = q1.values
-#    q2_val = q2.values
-#    q3_val = q3.values
-#    upper_val = upper.values
-#    lower_val = lower.values
-    
     cats = list(q1.index.tolist())
     cats = [str(x) for x in cats]
-    
     
     col_list = []
     for i in range(len(q1_val)):
@@ -100,18 +95,23 @@ def boxplot(q1, q2, q3, upper, lower, outx, outy, color):
                plot_height=400, 
                plot_width=950, 
                x_range=cats,
-               y_range=[.99*min(lower), 1.01*max(upper)])
-    
-#    p.vbar(x=cats,
-#            width=0.3,
-#            top=q3_val,
-#            bottom=q2_val, 
-#            fill_color=col_list, 
-#            line_color=None,
-#            source=source)
+               y_range=[.95*min(lower), 1.05*max(upper)])
 
+    #Glyph size parameters
+    vbar_w = 0.3
+    rect_w = vbar_w*(2/3)
+    rect_h = 0.01
+    mid_rect_w = vbar_w
+
+    #If data is too small then change size of glyphs
+    if (abs(q1_val[0] - q2_val[0])) < 0.02:
+        rect_h = rect_h/1000
+
+    mid_rect_h = rect_h
+
+    #Size of the top and bottom box plot boxes
     p.vbar(x='Category',
-            width=0.3,
+            width=vbar_w,
             top='Q3',
             bottom='Median', 
             fill_color='color', 
@@ -119,21 +119,26 @@ def boxplot(q1, q2, q3, upper, lower, outx, outy, color):
             source=source)
 
     p.vbar(x='Category',
-            width=0.3,
+            width=vbar_w,
             top='Median',
             bottom='Q1', 
             fill_color='color', 
             line_color=None,
             source=source)
    
+    #Vertical lines
     p.segment(cats, q3_val, cats, upper_val, line_color='black')
     p.segment(cats, q1_val, cats, lower_val, line_color='black')
     
-    p.rect(cats, upper_val, 0.2, 0.01, line_color='black')
-    p.rect(cats, lower_val, 0.2, 0.01, line_color='black')
-    p.rect(cats, q2_val, 0.3, 0.01, line_color='black')
-    
-    p.circle(outx, outy)
-    
+    #Horizontal lines representign the upper/lower bounds 
+    p.rect(cats, upper_val, rect_w, rect_h, line_color='black')
+    p.rect(cats, lower_val, rect_w, rect_h, line_color='black')
+    p.rect(cats, q2_val, mid_rect_w, mid_rect_h, line_color='black')
+
+    #Outlier circles
+    if outx:
+        print('outliers:', type(outx[0]), outx, type(outy[0]), outy)
+        p.circle(outx, outy, size=8, color='black')
+        
     return p
 

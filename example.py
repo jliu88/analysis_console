@@ -1,13 +1,13 @@
 #!usr/bin/env python
-import analysis_console as ac
+from hayspcconsole.analysis_console import Console
 from bokeh.sampledata.autompg import autompg
 from bokeh.sampledata.us_marriages_divorces import data
 
 #Choose example
-example = 3
+example = 2
 
 if example == 1: #Basic scatter chart
-    x = ac.Tools(df=autompg,
+    x = Console(df=autompg,
                 metric=list(autompg.columns),
                 xaxis='weight'
                 )
@@ -16,7 +16,7 @@ if example == 1: #Basic scatter chart
 
 
 if example == 2: #Scatter chart with different colors for categories
-    x = ac.Tools(df=autompg,
+    x = Console(df=autompg,
                 metric=list(autompg.columns),
                 xaxis = 'weight', 
                 cato = list(autompg.columns)
@@ -24,7 +24,7 @@ if example == 2: #Scatter chart with different colors for categories
     x.run()
     
 if example ==3: #Example of divorces over time
-    x = ac.Tools(df=data,
+    x = Console(df=data,
                 metric=list(data.columns),
                 xaxis='Year'
                 )
