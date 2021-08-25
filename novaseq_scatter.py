@@ -7,9 +7,9 @@ DIRT = r'\\ushw-file\users\transfer\Hayward_Statistical_Process_Control\Control_
 DS = 'NovaSeq_FIT_Data.xlsx'
 METRIC = ['Q30_Read1', 'Q30_Read2', 'Q30_Total', 'Run_Time', 'Yield_Total',
           'Prephasing_R1', 'Prephasing_R2', 'Phasing_R1', 'Phasing_R2',
-          '%_PF', 'Resynthesis', 'Cycle1_Intensity', 'Error_Rate', 'FWHM_Green',
+          '%_PF', 'Resynthesis',  'Error_Rate', 'FWHM_Green',
           'FWHM_Red', 'SD_FWHM_Green']
-CATEGORY = ['SBS_Lot', 'Buffer_Lot', 'Flowcell_Lot', 'Flowcell_Group']
+CATEGORY = ['SBS_Lot', 'Buffer_Lot', 'Flowcell_Lot', 'Flowcell_Group', 'Cluster_Lot']
 XML_DIRT = r'\\ushw-file\users\transfer\Hayward_Statistical_Process_Control\Control_Charts\NovaSeq\FIT'
 XML = 'NovaSeq_FIT_SPC.xml'
 
@@ -19,6 +19,8 @@ xml_path = path.join(XML_DIRT, XML)
 CONV= {'Total_Cycles': 'Cycles Completed'}
 
 df = pd.read_excel(ds_path)
+
+#METRIC = ['Cycle1_Intensity']
 
 #Without category
 #==============================================================================

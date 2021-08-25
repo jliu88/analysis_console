@@ -35,24 +35,27 @@ class Console(object):
         if isinstance(df, pd.DataFrame):
             self.df = df        
         #self.df.dropna(subset=metric, inplace=True)
-        if 'cato' in kwargs:
-            self.cato = kwargs['cato']
+
+        self.cato = kwargs.get('cato')
             #self.df.dropna(subset=self.cato)
-        if 'renamer' in kwargs:
-            self.renamer = kwargs['renamer']
-            self.df.rename(columns = self.renamer, inplace =True)
+            
+        self.renamer = kwargs.get('renamer')
+        if self.renamer:
+            self.df.rename(columns=self.renamer, inplace=True)
             self.s_kwargs['renamer'] = self.renamer
-        if 'xml_loc' in kwargs:
+                
+        if kwargs.get('xml_loc'):
             tree = ET.parse(kwargs['xml_loc'])
             self.root = tree.getroot()
             self.platform = kwargs['platform']
             self.s_kwargs['root'] = self.root
             self.s_kwargs['platform'] = self.platform
-        if 'col' in kwargs:
-            self.colors = kwargs['col']
+            
+        self.colors = kwargs.get('col')
+        if self.colors:
             self.s_kwargs['colors'] = self.colors
         else:
-            self.colors = Set1[9] 
+            self.colors = Set1[9]
         
         self.metric = metric
         self.xaxis = xaxis
@@ -151,6 +154,7 @@ class Console(object):
         if hasattr(self, 'root'):
             self.update_attrib()
         
+        print('N :', self.lastsel.value)
         self.df = self.df[-int(self.lastsel.value):]
         
         #Create layout of the page 
